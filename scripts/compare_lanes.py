@@ -11,15 +11,19 @@ from build_research_pack import build_research_pack, ensure_dir, lane_priority, 
 
 def render_ranked_lane_table(rows: list[dict]) -> str:
     lines = [
-        "# Ranked Lane Table",
+        "# Ranked Lane Table
+
+## Detailed Lane Comparison
+
+This section provides a comprehensive comparison of multiple lanes including their strengths and weaknesses, evidence levels, and recommendations.",
         "",
-        "| Rank | Lane | End System | Constraint | Evidence | Consensus | Mispricing | Catalyst | Total | Priority |",
+        "| Rank | Lane | End System | Constraint | Evidence | Consensus | Mispricing | Catalyst | Total | Priority | | Strengths | Weaknesses | Recommendations |",
         "|---|---|---|---:|---:|---:|---:|---:|---:|---|",
     ]
     for idx, row in enumerate(rows, start=1):
         score = row["lane_score"]
         lines.append(
-            "| {rank} | {lane} | {end_system} | {constraint} | {evidence} | {consensus} | {mispricing} | {catalyst} | {total} | {priority} |".format(
+            "| {rank} | {lane} | {end_system} | {constraint} | {evidence} | {consensus} | {mispricing} | {catalyst} | {total} | {priority} | | {strengths} | {weaknesses} | {recommendations} |".format(
                 rank=idx,
                 lane=row["lane"],
                 end_system=row["end_system"],
