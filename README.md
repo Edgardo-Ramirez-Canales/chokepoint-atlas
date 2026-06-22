@@ -140,3 +140,19 @@
 - [English Product Description](./docs/PRODUCT_EN.md)
 - [SKILL.md](./SKILL.md)
 - [Product Manual](./references/product-manual.md)
+
+## Contributing
+
+We welcome contributions to the Chokepoint Atlas project! If you want to help, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
