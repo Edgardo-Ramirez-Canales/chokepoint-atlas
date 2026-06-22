@@ -66,7 +66,7 @@ def validate_input(data: dict) -> dict:
             issues.append(f"top-level field `{field}` is required")
 
     if issues:
-        raise ValueError("Invalid research pack input:\n- " + "\n- ".join(issues))
+        raise ValueError("Invalid research pack input:\n- " + "\n- ".join(issues) + "\nPlease ensure all required fields are present and correctly formatted.")
 
     issues.extend(collect_missing_fields(data["meta"], REQUIRED_META_FIELDS, "meta"))
     issues.extend(collect_missing_fields(data["thesis"], REQUIRED_THESIS_FIELDS, "thesis"))
